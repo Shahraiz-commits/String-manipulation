@@ -1,0 +1,37 @@
+Module Module1
+
+    Sub Main()
+        Dim CharRemove, CharRemove2, CharRemove3, CharRemove4, CharRemove5, Str, X, Output As String
+        Dim counter As Integer
+        counter = 0
+        Str = ""
+        X = ""
+        Output = ""
+        Console.Write("Enter string: ")
+        Str = Console.ReadLine()
+        Console.Write("Enter the first character you wish to remove:  ")
+        CharRemove = Console.ReadLine()
+        Console.Write("Enter the second character you wish to remove: ")
+        CharRemove2 = Console.ReadLine()
+        Console.Write("Enter the third character you wish to remove:  ")
+        CharRemove3 = Console.ReadLine()
+        Console.Write("Enter the fourth character you wish to remove: ")
+        CharRemove4 = Console.ReadLine()
+        Console.Write("Enter the fifth character you wish to remove:  ")
+        CharRemove5 = Console.ReadLine()
+
+        For counter = 1 To Len(Str)
+            X = Mid(Str, counter, 1)
+            If X <> CharRemove And X <> CharRemove2 And X <> CharRemove3 And X <> CharRemove4 And X <> CharRemove5 Then
+                Output = Output & X
+            End If
+
+        Next
+
+        Console.Write(Output)
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
