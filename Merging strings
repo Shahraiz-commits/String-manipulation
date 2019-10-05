@@ -1,0 +1,28 @@
+Module Module1
+
+    Sub Main()
+        Dim Sp As Integer
+        Dim Str1, Str2, Word1, Word2, Str3 As String
+        Str1 = ""
+        Str2 = ""
+        Str3 = ""
+        Word1 = ""
+        Word2 = ""
+
+        Console.Write("Enter string 1 ")
+        Str1 = Console.ReadLine()
+        Console.Write("Enter string 2 ")
+        Str2 = Console.ReadLine()
+        Sp = InStr(Str1, " ")
+        Word1 = Mid(Str1, 1, Sp)
+        Sp = InStr(Str2, " ")
+        Word2 = Right(Str2, Len(Str2) - Sp)
+        Str3 = Word1 & Word2
+
+        Console.Write(Str3)
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
