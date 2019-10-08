@@ -1,0 +1,34 @@
+        Declare  Str1 : String
+        Declare Finalstr : String
+        Declare CharRemoval : Char
+        Declare Char1 : Char
+        Declare CharReplacer : Char
+        Declare count : Integer
+
+
+        Str1 = ""
+        CharRemoval = ''    
+        CharReplacer = ''
+        count = 0
+        Char1 = ''
+        FinalStr = ""
+
+        Output "Please enter a string:" 
+        Input   Str1 
+        Output "Please enter the character to be removed: "
+        Input   CharRemoval
+        Output "Please enter the character it needs to be replaced with: "
+        Input   CharReplacer
+
+        For count = 1 To Length(Str1)
+
+            Char1 = Mid(Str1, count, 1)
+            If Char1 = CharRemoval Then
+                FinalStr = FinalStr & CharReplacer
+            Else
+                FinalStr = FinalStr & Char1
+
+            End If
+
+        Next
+        Output "The final string is" & " " & FinalStr & "."
