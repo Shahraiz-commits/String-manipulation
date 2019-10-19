@@ -1,0 +1,26 @@
+        Declare Str1 : String
+        Declare Char1 : Character
+        Declare Digits, Letters, Count : Integer
+
+        Count = 0
+        Digits = 0
+        Letters = 0
+        Char1 = ''
+        Str1 = ""
+
+        Output "Enter string: "
+        Input Str1
+
+        For Count = 1 To Len(Str1)
+            Char1 = Mid(Str1, Count, 1)
+
+            If Asc(Char1) >= 65 Then
+                Letters = Letters + 1
+            Else Digits = Digits + 1
+
+
+            End If
+
+         End For
+         
+            Output "Letters are ", Letters, " and digits are ", Digits
