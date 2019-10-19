@@ -1,0 +1,33 @@
+ Declare Str1 : String
+        Declare Str2 : String
+        Declare Count : Integer
+        Declare NextChar : Character
+        Declare Count2 : Integer
+        Declare Str2char : Character
+        Declare Vowels : Integer
+
+
+        Vowels = 0
+        Str2char = ''
+        Count2 = 0
+        NextChar = ''
+        Count = 0
+        Str1 = ""
+        Str2 = ""
+
+        Output("Enter string: ")
+        Input(Str1)
+        Str2 = "AEIOU"
+
+        For Count = 1 To LENGTH(Str1)
+            NextChar = Mid(Str1, Count, 1)
+
+            For Count2 = 1 To LENGTH(Str2)
+                Str2char = Mid(Str2, Count2, 1)
+                If UCase(NextChar) = Str2char Then Vowels = Vowels + 1
+                
+            EndFor()
+
+         EndFor()
+
+                Output("Number of vowels in this string are ", Vowels)
