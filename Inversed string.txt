@@ -1,0 +1,19 @@
+        Declare STR1 : String
+        Declare STR2 : String
+        Declare count : Integer
+        Declare Char1 : Character
+
+        count = 0
+        STR1 = ""
+        STR2 = ""
+        Char1 = ''
+
+        Output "Enter string: "
+        Input STR1
+
+        For count = LENGTH(STR1) To 1 Step count - 1
+            Char1 = Mid(STR1, count, 1)
+            STR2 = STR2 & Char1
+        EndFor
+
+        Output "inversed string is: ", STR2
